@@ -4,15 +4,13 @@ class Solution {
     for(int i = 0 ; i<n;i++){
         List<Integer> a = new ArrayList<>();
         for(int j = 0; j<=i;j++){
-            a.add(1);
+           if(j==0 || j==i) a.add(1);
+        else{
+             a.add(ans.get(i-1).get(j)+ ans.get(i-1).get(j-1));
+        }
         }
         ans.add(a);
-    }
-    for(int i = 2; i<n;i++){
-        for(int j = 1;j<=i-1;j++){
-            ans.get(i).set(j,ans.get(i-1).get(j)+ ans.get(i-1).get(j-1));
         }
-    }
     return ans;
     }
 }
