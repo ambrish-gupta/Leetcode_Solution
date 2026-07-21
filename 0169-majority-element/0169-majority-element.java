@@ -5,17 +5,17 @@ class Solution {
         int ele = 0;
         for(int i = 0; i<n;i++){
             if(cnt==0){
-                cnt = 1;
+                cnt=1;
                 ele = nums[i];
-            }else if(nums[i]==ele){
+            }else if(nums[i] == ele){
                 cnt++;
             }else{
                 cnt--;
             }
         }
         int ncnt = 0;
-        for(int i = 0; i<n;i++){
-            if(nums[i]==ele)ncnt++;
+        for(int j = 0; j<n;j++){
+            if(nums[j]==ele)ncnt++;
         }
         if(ncnt>n/2){
             return ele;
