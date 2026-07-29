@@ -1,7 +1,6 @@
 class Solution {
-    public List<Integer> getRow(int rowIndex) {
+    public List<Integer> getRow(int n) {
     List<List<Integer>> ans = new ArrayList<>();
-    int n = rowIndex;
     for(int i = 0 ; i<=n;i++){
         List<Integer> a = new ArrayList<>();
         for(int j = 0; j<=i;j++){
@@ -12,6 +11,6 @@ class Solution {
         }
         ans.add(a);
         }
-        return ans.get(rowIndex);
+        return ans.get(n);
    }
 }
